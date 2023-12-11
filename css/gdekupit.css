@@ -1,0 +1,429 @@
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0; /* Убираем внешние отступы у body */
+    padding: 0;
+    background-color: rgb(108,91,123);
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+footer {
+    flex: 0 0 auto;
+}
+
+@media screen and (min-width: 1200px) { /*для десктопа*/
+    #mobail-menu {
+        display: none;
+    }
+
+    #mobail-napolnenie {
+        display: none
+    }
+
+    .mobail-podval {
+        display: none;
+    }
+
+    /*Шапка с навигационным меню десктоп*/
+
+    header nav {
+        display: flex; /* Создаем флекс контейнер */
+        flex-direction: row; /* Указываем направление основной и поперечной оси слева направо и сверху вниз */
+        flex-wrap: nowrap; /* элементы умещаются в один ряд без возможности переноса на следующую строку */
+        justify-content: space-between; /* выравниваем элементы по основной оси */
+        align-items: center; /* выравниваем элементы по попнончой оси */
+        background-color: rgb(156,94,111); /*  */
+        padding: 0;
+        height: 120px;
+    }
+
+    .menu ul {
+        list-style: none; /* убираем маркеры у списка */
+        display: flex;
+        flex-flow: row nowrap; /* Помесь выравнивания по direction и wrap */
+        margin: 0;
+        padding: 0;
+    }
+
+    .menu li {
+        margin-right: 20px; /* задаем внешние отступы справа */
+        border: solid; /* отображение границ */
+        border-width: thin; /* толщина границ */
+        padding: 7px; /* задаем внутренние отступы от границы */
+        border-color: rgb(255, 255, 255); /* задаем цвет границ */
+        background-color: rgb(108,91,123); /* задаем задний фон */
+        font-size: 16px; /* Задаем размер текста */
+        transition: 0.3s; /* время срабатывания анимации увеличения */
+    }
+
+        .menu li:hover { /* задаем эффекты при наведении курсора */
+            background-color: rgb(89,120,109); /* задний фон */
+            border-width: medium; /* толщина границ */
+            transform: scale(1.1); /* увеличение при наведении */
+        }
+
+        .menu li:last-child {
+            margin-right: 0; /* Убираем отступ у последнего лемента справа */
+        }
+
+    .menu a {
+        padding: 8px 10px; /* увеличиваем область нажатия на ссылку */
+    }
+
+    .logo {
+        margin-right: 60px; /* Задаем отступ справа для логотипа */
+        margin-bottom: 0;
+        padding: 0;
+    }
+
+    .menu li a {
+        color: rgb(255, 255, 255); /* Задаем цвет текста */
+        text-decoration: none; /* Убираем подчеркивание ссылки */
+    }
+
+    .search {
+        margin-right: 20px;
+    }
+
+    /*Основное содержимое десктоп*/
+
+        #desctop-napolnenie {
+            height:100%;
+        }
+            #desctop-napolnenie img {
+                height: 750px;
+                width: 100%;
+            }
+
+    /*Шапка подвала десктоп*/
+
+    .desctop-podval {
+        display: flex; /* Создаем флекс контейнер */
+        flex-direction: row; /* Указываем направление основной и поперечной оси слева направо и сверху вниз */
+        flex-wrap: nowrap; /* элементы умещаются в один ряд без возможности переноса на следующую строку */
+        justify-content: space-between; /* выравниваем элементы по основной оси */
+        align-items: center; /* выравниваем элементы по попнончой оси */
+        background-color: rgb(156,94,111); /*  */
+        padding: 0;
+        height: 180px;
+        border-top: solid;
+        border-width: thin;
+        border-color: white;
+    }
+
+    .left-podval {
+        width: 200px;
+        height: 100px;
+        padding: 0;
+        margin: 0;
+        margin-left: 60px;
+    }
+
+        .left-podval img {
+            width: 200px;
+            height: 100px;
+            padding: 0;
+            margin: 0;
+        }
+
+    .center-podval {
+        display: inline-flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        border: solid;
+        border-width: thin;
+        border-color: white;
+        padding: 20px;
+        background-color: rgb(108,91,123);
+    }
+
+    .miv-soc {
+        display: inline-flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: left;
+        margin-top: 15px;
+        font-size: 16px;
+        color: white;
+    }
+
+    .soc-set {
+        display: inline-flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: right;
+    }
+
+        .soc-set ul {
+            display: inline-flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-evenly;
+            list-style: none;
+        }
+
+        .soc-set li {
+            margin: 10px;
+        }
+
+    .right-podval {
+        display: inline-flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        margin-right: 20px;
+        border: solid; /* отображение границ */
+        border-width: thin;
+        border-color: white;
+        background-color: rgb(108,91,123);
+    }
+
+        .right-podval p {
+            margin: 10px;
+            font-size: 16px;
+            color: white;
+            padding: 5px;
+        }
+
+    #podval-p {
+        margin-top: 17px;
+    }
+}
+
+
+
+
+
+@media screen and (max-width: 1020px) { /*Для мобилы*/
+    #desctop-menu {
+        display: none;
+    }
+
+    .desctop-podval {
+        display: none;
+    }
+
+    #desctop-napolnenie {
+        display: none;
+    }
+
+    /*Создаем шапку с навигацией*/
+
+    #menu-btn {
+        position: absolute;
+        top: -100%;
+        left: -100%;
+    }
+
+    .menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        grid-area: nav;
+        max-width: unset;
+        max-height: 0;
+        transition: max-height .2s ease-out;
+        overflow: hidden;
+        margin: 0%;
+        padding: 0%;
+        flex-direction: column;
+        font-size: 400%;
+    }
+
+    header {
+        width: 100%;
+        margin-bottom: 0px;
+        background-color: rgb(156,94,111);
+        display: grid;
+        grid-template-areas:
+            "title   title   hamburger"
+            "nav     nav     nav";
+    }
+
+    h1 {
+        grid-area: title;
+        padding: 0;
+        margin: 0;
+        line-height: 0;
+        justify-content: left;
+    }
+
+    .menu a {
+        text-decoration: none;
+        color: white;
+        border: solid; /* отображение границ */
+        border-width: thin; /* толщина границ */
+        padding: 7px; /* задаем внутренние отступы от границы */
+        border-color: rgb(255, 255, 255); /* задаем цвет границ */
+        padding: 20px 20px;
+        margin: 10%;
+        border-right: 1px solid #f4f4f4;
+        background-color: rgb(108,91,123);
+        width: 40%;
+        height: 100%;
+        text-align: center;
+        height: max-content;
+    }
+
+    .menu-icon {
+        grid-area: hamburger;
+        cursor: pointer;
+        display: flex;
+        justify-content: flex-end;
+        align-items: baseline;
+        padding: 40%;
+        position: relative;
+        user-select: none;
+        visibility: visible;
+    }
+
+    .navicon {
+        background: #333;
+        display: block;
+        height: 15px;
+        width: 200px;
+        position: relative;
+    }
+
+        .navicon:before {
+            top: 30px;
+        }
+
+        .navicon:after {
+            top: -30px;
+        }
+
+        .navicon:before, .navicon:after {
+            background: #333;
+            display: block;
+            width: 100%;
+            height: 100%;
+            content: '';
+            position: absolute;
+            transition: transform .2s ease-out;
+        }
+
+    .menu-btn:checked ~ .menu {
+        max-height: max-content;
+    }
+
+    .menu-btn:checked ~ .menu-icon .navicon {
+        background: transparent;
+    }
+
+        .menu-btn:checked ~ .menu-icon .navicon:before {
+            transform: rotate(-45deg);
+        }
+
+        .menu-btn:checked ~ .menu-icon .navicon:after {
+            transform: rotate(45deg);
+        }
+
+        .menu-btn:checked ~ .menu-icon .navicon:before,
+        .menu-btn:checked ~ .menu-icon .navicon:after {
+            top: 0;
+        }
+
+    /*Основное содержимое мобильная версия*/
+    #mobail-napolnenie {
+        height: 100%;
+    }
+        #mobail-napolnenie img {
+            height: 100%;
+            width: 100%;
+        }
+
+    /*Шапка подвала мобильная*/
+    .mobail-podval {
+        display: flex; /* Создаем флекс контейнер */
+        flex-direction: column; /* Указываем направление основной и поперечной оси слева направо и сверху вниз */
+        flex-wrap: nowrap; /* элементы умещаются в один ряд без возможности переноса на следующую строку */
+        align-items: center; /* выравниваем элементы по попнончой оси */
+        background-color: rgb(156,94,111); /*  */
+        padding: 0;
+        margin: 0;
+        border-top: solid;
+        border-width: thin;
+        border-color: white;
+        height: max-content;
+    }
+
+    .left-podval {
+        width: 60%;
+        height: 60%;
+        padding: 0;
+        margin: 5%;
+        margin-left: 7%;
+    }
+
+        .left-podval img {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+        }
+
+    .center-podval {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        border: solid;
+        border-width: thin;
+        border-color: white;
+        padding: 10px;
+        background-color: rgb(108,91,123);
+        margin: 5%;
+        margin-top: 0;
+    }
+
+    .miv-soc {
+        font-size: 280%;
+        color: white;
+        margin-right: auto;
+        margin-left: 165px;
+        margin-bottom: -30px;
+    }
+
+    .soc-set ul {
+        display: inline-flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        list-style: none;
+    }
+
+    .soc-set li {
+        margin: 50px;
+    }
+
+    .right-podval {
+        display: inline-flex;
+        margin-bottom: 4%;
+        padding: 3%;
+        border: solid; /* отображение границ */
+        border-width: thin;
+        border-color: white;
+        background-color: rgb(108,91,123);
+    }
+
+        .right-podval p {
+            font-size: 280%;
+            color: white;
+        }
+
+    #podval-p {
+        margin-top: 60px;
+        margin-right: 60px;
+    }
+}

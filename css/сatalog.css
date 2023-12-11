@@ -1,0 +1,787 @@
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0; /* Убираем внешние отступы у body */
+    padding: 0;
+    background-color: rgb(108,91,123);
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+footer {
+    flex: 0 0 auto;
+}
+
+@media screen and (min-width: 1200px) { /*для десктопа*/
+    #mobail-menu {
+        display: none;
+    }
+
+    #mobail-napolnenie {
+        display: none
+    }
+
+    .mobail-podval {
+        display: none;
+    }
+
+    /*Шапка с навигационным меню десктоп*/
+
+        header nav {
+            display: flex; /* Создаем флекс контейнер */
+            flex-direction: row; /* Указываем направление основной и поперечной оси слева направо и сверху вниз */
+            flex-wrap: nowrap; /* элементы умещаются в один ряд без возможности переноса на следующую строку */
+            justify-content: space-between; /* выравниваем элементы по основной оси */
+            align-items: center; /* выравниваем элементы по попнончой оси */
+            background-color: rgb(156,94,111); /*  */
+            padding: 0;
+            height: 120px;
+            border-bottom: solid;
+            border-width: thin;
+            border-color: white;
+        }
+
+    .menu ul {
+        list-style: none; /* убираем маркеры у списка */
+        display: flex;
+        flex-flow: row nowrap; /* Помесь выравнивания по direction и wrap */
+        margin: 0;
+        padding: 0;
+    }
+
+    .menu li {
+        margin-right: 20px; /* задаем внешние отступы справа */
+        border: solid; /* отображение границ */
+        border-width: thin; /* толщина границ */
+        padding: 7px; /* задаем внутренние отступы от границы */
+        border-color: rgb(255, 255, 255); /* задаем цвет границ */
+        background-color: rgb(108,91,123); /* задаем задний фон */
+        font-size: 16px; /* Задаем размер текста */
+        transition: 0.3s; /* время срабатывания анимации увеличения */
+    }
+
+        .menu li:hover { /* задаем эффекты при наведении курсора */
+            background-color: rgb(89,120,109); /* задний фон */
+            border-width: medium; /* толщина границ */
+            transform: scale(1.1); /* увеличение при наведении */
+        }
+
+        .menu li:last-child {
+            margin-right: 0; /* Убираем отступ у последнего лемента справа */
+        }
+
+    .menu a {
+        padding: 8px 10px; /* увеличиваем область нажатия на ссылку */
+    }
+
+    .logo {
+        margin-right: 60px; /* Задаем отступ справа для логотипа */
+        margin-bottom: 0;
+        padding: 0;
+    }
+
+    .menu li a {
+        color: rgb(255, 255, 255); /* Задаем цвет текста */
+        text-decoration: none; /* Убираем подчеркивание ссылки */
+    }
+
+    .search {
+        margin-right: 20px;
+    }
+
+   
+    
+    
+    /*Основное содержимое десктоп*/
+
+        .zagolov-blok {
+            display: flex;
+            flex-direction: column;
+        }
+            .zagolov-blok h3 {
+                margin-left: auto;
+                margin-right: auto;
+                color: white;
+                margin-bottom: 10px;
+                font-size: 280%;
+                font-style: italic;
+            }
+            .osnov-cat {
+            display: flex;
+            flex-direction: row; /* Указываем направление основной и поперечной оси слева направо и сверху вниз */
+            flex-wrap: nowrap;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: rgb(156, 94, 111);
+            border: solid;
+            border-width: thin;
+            border-color: white;
+            margin-top: 20px;
+            margin-bottom: 40px;
+            }
+                .osnov-cat ul {
+                    list-style: none; /* убираем маркеры у списка */
+                    display: flex;
+                    flex-flow: row nowrap;
+                    margin: 10px;
+                    padding: 5px;
+                }
+                    .osnov-cat li {
+                        border: solid; /* отображение границ */
+                        border-width: thin; /* толщина границ */
+                        padding: 0px 50px; /* задаем внутренние отступы от границы */
+                        border-color: rgb(255, 255, 255); /* задаем цвет границ */
+                        background-color: rgb(108,91,123); /* задаем задний фон */
+                        color: white;
+                        font-size: 14px; /* Задаем размер текста */
+                        transition: 0.3s; /* время срабатывания анимации увеличения */
+                    }
+
+                        .osnov-cat li:hover { /* задаем эффекты при наведении курсора */
+                            background-color: rgb(89,120,109); /* задний фон */
+                            border-width: medium; /* толщина границ */
+                            transform: scale(1.1); /* увеличение при наведении */
+                        }
+
+                        .osnov-cat li:last-child {
+                            margin-right: 0;
+                        }
+                        .osnov-cat p {
+                            margin: 7px;
+                        }
+        .obs-blok {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-evenly;
+        }
+
+                .filtrs {
+                display: flex;
+                flex-direction: column;
+                background-color: rgb(156,94,111);
+                margin-right: 60px;
+                height: max-content;
+                border: solid;
+                border-color: white;
+                border-width: thin;
+                padding-right: 50px;
+                padding-left: 50px;
+                }
+                    .name-filtr {
+                        list-style: none;
+                        border: solid;
+                        border-color: white;
+                        border-width: thin;
+                        padding: 20px;
+                        background-color: rgb(108,91,123);
+                    }
+
+                        .name-filtr li {
+                            font-size: 18px;
+                            color: white;
+                            margin-top: 10px;                            
+                        }
+
+                            #send { /*Обращаемся к кнопке отправки*/
+                                color: white; /*Задаем цвет текста*/
+                                display: block; /*Задаем блочную модель*/
+                                cursor: pointer; /*Задаем вид курсора*/
+                                padding: 15px 25px; /*Задаем внутренние границы*/
+                                font-size: 90%; /*Задаем размер текста*/
+                                border: solid 2px #F9F9F9; /*Задаем толщину сплошной границы черного цвета*/
+                                border-radius: 10px; /*Задаем закругление углов границы*/
+                                background-color: rgb(108,91,123); /*Задаем фон цвет*/
+                                width: 70%; /*Задаем ширину*/
+                                margin: 2%; /*Задаем внешние границы*/
+                                margin-left: 35px;
+                                margin-bottom: 20px;
+                            }
+
+                                #send:hover {
+                                    background-color: rgb(245, 222, 73);
+                                    color: rgb(11, 71, 45)
+                                }
+
+            .cartochi {
+                display: inline;
+            }
+            .cartochi :last-child {
+                margin-right: 100px;
+            }
+                .karta {
+                    display: block;
+                    box-shadow: 0 4px 8px;
+                    width: 250px;
+                    height: 500px;
+                    margin: 0;
+                    margin-bottom: 70px;
+                    padding: 5%;
+                    background-color: rgb(156, 94, 111);
+                    border: solid;
+                    border-color: white;
+                    border-width: thin;
+                    text-align: center;
+                }
+                    .karta img {
+                        width: 100%;
+                        height: 75%;
+                    }
+
+                    .karta a {
+                        text-decoration: none;
+                    }
+                    .karta p {
+                        margin-top: 15px;
+                        margin-left: 15px;
+                        font-size: 16px;
+                        color: white;
+                        width: max-content;
+                        margin-bottom: 60px;
+                    }
+                        .podrobno {
+                            padding: 10px;
+                            border: solid;
+                            border-color: white;
+                            border-width: thin;
+                            color: white;
+                            margin-left: 70px;
+                            background-color: rgb(108,91,123); /* задаем задний фон */
+                            font-size: 16px; /* Задаем размер текста */
+                            transition: 0.3s;
+                        }
+                        .podrobno:hover {
+                            background-color: rgb(89,120,109); /* задний фон */
+                            border-width: medium; /* толщина границ */
+                            transform: scale(1.1);
+                        }
+
+
+    /*Шапка подвала десктоп*/
+    .desctop-podval {
+        display: flex; /* Создаем флекс контейнер */
+        flex-direction: row; /* Указываем направление основной и поперечной оси слева направо и сверху вниз */
+        flex-wrap: nowrap; /* элементы умещаются в один ряд без возможности переноса на следующую строку */
+        justify-content: space-between; /* выравниваем элементы по основной оси */
+        align-items: center; /* выравниваем элементы по попнончой оси */
+        background-color: rgb(156,94,111); /*  */
+        height: 180px;
+        border-top: solid;
+        border-width: thin;
+        border-color: white;
+    }
+
+    .left-podval {
+        width: 200px;
+        height: 100px;
+        padding: 0;
+        margin: 0;
+        margin-left: 60px;
+    }
+
+        .left-podval img {
+            width: 200px;
+            height: 100px;
+            padding: 0;
+            margin: 0;
+        }
+
+    .center-podval {
+        display: inline-flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        border: solid;
+        border-width: thin;
+        border-color: white;
+        padding: 20px;
+        background-color: rgb(108,91,123);
+    }
+
+    .miv-soc {
+        display: inline-flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: left;
+        margin-top: 15px;
+        font-size: 16px;
+        color: white;
+    }
+
+    .soc-set {
+        display: inline-flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: right;
+    }
+
+        .soc-set ul {
+            display: inline-flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-evenly;
+            list-style: none;
+        }
+
+        .soc-set li {
+            margin: 10px;
+        }
+
+    .right-podval {
+        display: inline-flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        margin-right: 20px;
+        border: solid; /* отображение границ */
+        border-width: thin;
+        border-color: white;
+        background-color: rgb(108,91,123);
+    }
+
+        .right-podval p {
+            margin: 10px;
+            font-size: 16px;
+            color: white;
+            padding: 5px;
+        }
+
+    #podval-p {
+        margin-top: 17px;
+    }
+}
+
+
+
+
+
+@media screen and (max-width: 1020px) { /*Для мобилы*/
+    #desctop-menu {
+        display: none;
+    }
+
+    .desctop-podval {
+        display: none;
+    }
+
+    #desctop-napolnenie {
+        display: none;
+    }
+
+    /*Создаем шапку с навигацией*/
+
+    #menu-btn {
+        position: absolute;
+        top: -100%;
+        left: -100%;
+    }
+
+    .menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        grid-area: nav;
+        max-width: unset;
+        max-height: 0;
+        transition: max-height .2s ease-out;
+        overflow: hidden;
+        margin: 0%;
+        padding: 0%;
+        flex-direction: column;
+        font-size: 400%;
+    }
+
+    header {
+        width: 100%;
+        margin-bottom: 0px;
+        background-color: rgb(156,94,111);
+        display: grid;
+        grid-template-areas:
+            "title   title   hamburger"
+            "nav     nav     nav";
+    }
+
+    h1 {
+        grid-area: title;
+        padding: 0;
+        margin: 0;
+        line-height: 0;
+        justify-content: left;
+    }
+
+    .menu a {
+        text-decoration: none;
+        color: white;
+        border: solid; /* отображение границ */
+        border-width: thin; /* толщина границ */
+        padding: 7px; /* задаем внутренние отступы от границы */
+        border-color: rgb(255, 255, 255); /* задаем цвет границ */
+        padding: 20px 20px;
+        margin: 10%;
+        border-right: 1px solid #f4f4f4;
+        background-color: rgb(108,91,123);
+        width: 40%;
+        height: 100%;
+        text-align: center;
+        height: max-content;
+    }
+
+    .menu-icon {
+        grid-area: hamburger;
+        cursor: pointer;
+        display: flex;
+        justify-content: flex-end;
+        align-items: baseline;
+        padding: 40%;
+        position: relative;
+        user-select: none;
+        visibility: visible;
+    }
+
+    .navicon {
+        background: #333;
+        display: block;
+        height: 15px;
+        width: 200px;
+        position: relative;
+    }
+
+        .navicon:before {
+            top: 30px;
+        }
+
+        .navicon:after {
+            top: -30px;
+        }
+
+        .navicon:before, .navicon:after {
+            background: #333;
+            display: block;
+            width: 100%;
+            height: 100%;
+            content: '';
+            position: absolute;
+            transition: transform .2s ease-out;
+        }
+
+    .menu-btn:checked ~ .menu {
+        max-height: max-content;
+    }
+
+    .menu-btn:checked ~ .menu-icon .navicon {
+        background: transparent;
+    }
+
+        .menu-btn:checked ~ .menu-icon .navicon:before {
+            transform: rotate(-45deg);
+        }
+
+        .menu-btn:checked ~ .menu-icon .navicon:after {
+            transform: rotate(45deg);
+        }
+
+        .menu-btn:checked ~ .menu-icon .navicon:before,
+        .menu-btn:checked ~ .menu-icon .navicon:after {
+            top: 0;
+        }
+
+    /*Основное содержимое мобильная версия*/
+
+    .mobail-napolnenie {
+        display: flex;
+        flex-direction: column;
+    }
+        #hhhhh {            
+            color: white;
+            margin-left: 33%;
+            font-size: 280%;
+            font-style: italic;
+        }
+
+    .osnov-cat {
+        display: flex;
+        flex-direction: row; /* Указываем направление основной и поперечной оси слева направо и сверху вниз */
+        flex-wrap: nowrap;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: rgb(156, 94, 111);
+        border: solid;
+        border-width: thin;
+        border-color: white;
+        margin-top: 20px;
+        margin-bottom: 40px;
+        width: 70%;
+    }
+
+        .osnov-cat ul {
+            list-style: none; /* убираем маркеры у списка */
+            display: flex;
+            flex-flow: row nowrap;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 5px;
+        }
+
+        .osnov-cat li {
+            border: solid; /* отображение границ */
+            border-width: thin; /* толщина границ */
+            padding: 0px; /* задаем внутренние отступы от границы */
+            border-color: rgb(255, 255, 255); /* задаем цвет границ */
+            background-color: rgb(108,91,123); /* задаем задний фон */
+            color: white;
+            width: 160px;
+            font-size: 100%; /* Задаем размер текста */
+            transition: 0.3s; /* время срабатывания анимации увеличения */
+        }
+
+            .osnov-cat li:hover { /* задаем эффекты при наведении курсора */
+                background-color: rgb(89,120,109); /* задний фон */
+                border-width: medium; /* толщина границ */
+                transform: scale(1.1); /* увеличение при наведении */
+            }
+
+            .osnov-cat li:last-child {
+                margin-right: 0;
+            }
+
+                .osnov-cat p {
+                    margin: 7px;
+                    margin-left:auto;
+                    text-align: center;
+                }
+        .obs-blok {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+        }
+            .cartochi {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap
+            }
+                .karta {
+                    display: block;
+                    box-shadow: 0 4px 8px;
+                    width: 30%;
+                    height: 50%;
+                    margin-left: 11%;
+                    margin-bottom: 7%;
+                    margin-top: 7%;
+                    padding: 1.5%;
+                    background-color: rgb(156, 94, 111);
+                    border: solid;
+                    border-color: white;
+                    border-width: thin;
+                    text-align: center;
+                }
+
+                    .karta img {
+                        width: 100%;
+                        height: 75%;
+                    }
+
+                    .karta a {
+                        text-decoration: none;
+                    }
+
+                    .karta p {
+                        margin-top: 5%;
+                        margin-left: 12%;
+                        font-size: 110%;
+                        color: white;
+                        width: max-content;
+                        margin-bottom: 60px;
+                    }
+
+                    .podrobno {
+                        padding: 1.5%;
+                        border: solid;
+                        border-color: white;
+                        border-width: thin;
+                        color: white;
+                        background-color: rgb(108,91,123); /* задаем задний фон */
+                        font-size: 100%; /* Задаем размер текста */
+                        transition: 0.3s;
+                    }
+
+                        .podrobno:hover {
+                            background-color: rgb(89,120,109); /* задний фон */
+                            border-width: medium; /* толщина границ */
+                            transform: scale(1.1);
+                        }
+
+
+
+    .str {
+        display: flex;
+        flex-direction: row; /* Указываем направление основной и поперечной оси слева направо и сверху вниз */
+        flex-wrap: nowrap;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: rgb(156, 94, 111);
+        border: solid;
+        border-width: thin;
+        border-color: white;
+        margin-top: 20px;
+        margin-bottom: 40px;
+        width: 70%;
+    }                         
+                        
+                        
+    .str ul {
+        list-style: none; /* убираем маркеры у списка */
+        display: flex;
+        flex-flow: row nowrap;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 5px;
+    }
+
+        .str li {
+            border: solid; /* отображение границ */
+            border-width: thin; /* толщина границ */
+            padding: 0px 2.5px; /* задаем внутренние отступы от границы */
+            border-color: rgb(255, 255, 255); /* задаем цвет границ */
+            background-color: rgb(108,91,123); /* задаем задний фон */
+            color: white;
+            width: 160px;
+            font-size: 90%; /* Задаем размер текста */
+            transition: 0.3s; /* время срабатывания анимации увеличения */
+        }
+
+            .str li:hover { /* задаем эффекты при наведении курсора */
+                background-color: rgb(89,120,109); /* задний фон */
+                border-width: medium; /* толщина границ */
+                transform: scale(1.1); /* увеличение при наведении */
+            }
+
+            .str li:last-child {
+                margin-right: 0;
+            }
+
+                .str p {
+                    text-align: center;
+                    color: white;
+                }
+                .str li a {
+                    text-decoration: none;
+                }
+
+        .filtrs a {
+            text-decoration: none;
+        }
+
+        .filtrs p {
+            text-align: center;
+            color: white;
+            font-size: 120%;
+            background-color: rgb(156,94,111);
+            width: max-content;
+            padding: 2% 3%;
+            border: solid;
+            border-width: thin;
+            border-color: white;
+            margin-left:auto;
+            margin-right:auto;
+        }
+            .filtrs p:hover {
+                background-color: rgb(89,120,109); /* задний фон */
+                border-width: medium; /* толщина границ */
+                transform: scale(1.1);
+            }
+
+
+    /*Шапка подвала мобильная*/
+    .mobail-podval {
+        display: flex; /* Создаем флекс контейнер */
+        flex-direction: column; /* Указываем направление основной и поперечной оси слева направо и сверху вниз */
+        flex-wrap: nowrap; /* элементы умещаются в один ряд без возможности переноса на следующую строку */
+        align-items: center; /* выравниваем элементы по попнончой оси */
+        background-color: rgb(156,94,111); /*  */
+        padding: 0;
+        margin: 0;
+        border-top: solid;
+        border-width: thin;
+        border-color: white;
+        height: max-content;
+    }
+
+    .left-podval {
+        width: 60%;
+        height: 60%;
+        padding: 0;
+        margin: 5%;
+        margin-left: 7%;
+    }
+
+        .left-podval img {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+        }
+
+    .center-podval {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        border: solid;
+        border-width: thin;
+        border-color: white;
+        padding: 10px;
+        background-color: rgb(108,91,123);
+        margin: 5%;
+        margin-top: 0;
+    }
+
+        .miv-soc {
+            font-size: 280%;
+            color: white;
+            margin-right: auto;
+            margin-left: 165px;
+            margin-bottom: -30px;
+        }
+
+            .soc-set ul {
+                display: inline-flex;
+                flex-wrap: nowrap;
+                justify-content: center;
+                list-style: none;
+            }
+
+            .soc-set li {
+                margin: 50px;
+            }
+
+    .right-podval {
+        display: inline-flex;
+        margin-bottom: 4%;
+        padding: 3%;
+        border: solid; /* отображение границ */
+        border-width: thin;
+        border-color: white;
+        background-color: rgb(108,91,123);
+    }
+
+        .right-podval p {
+            font-size: 280%;
+            color: white;
+        }
+
+    #podval-p {
+        margin-top: 60px;
+        margin-right: 60px;
+    }
+}
+        
